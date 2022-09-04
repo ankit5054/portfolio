@@ -582,13 +582,11 @@ img {
 
 .skills__content:hover{
   /* background-color: var(--skill-content-first-color); */
-  padding: 0.6rem 0.6rem 0 0.6rem;
+  padding: 1rem 1rem 1rem;
+  /* margin-bottom: 1rem; */
   box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, .15);
   border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
-
-
-
 
 .skills__close .skills__list{
   height: 0;
