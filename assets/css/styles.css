@@ -389,6 +389,7 @@ img {
 
 }
 
+
 .button:hover {
   background-color: var(--first-color-alt);
   border-radius: 1.4rem;
@@ -632,3 +633,57 @@ img {
 /* For medium devices */
 
 /* For large devices */
+
+
+
+
+/* Notice */
+.button__notice {
+  display: block;
+  padding: 10px 1rem 10px 1rem;
+  background-color: rgb(188, 24, 98);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  transition: 0.7s;
+  
+}
+
+.button__notice:hover{
+  background-color: rgb(170, 155, 162);
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  padding: 10px 5px 10px 5px;
+  color: black;
+
+}
+
+
+
+.popup{
+  width: 400px;
+  background: rgb(132, 114, 114);
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  transition: 0.6s;
+}
+
+.popup:hover{
+  background: rgb(212, 255, 20);
+  border-radius: 1rem;
+  margin: 10px 10px 10px 10px;
+  width: 480px;
+  font-size: var(--h3-font-size);
+}
+
+.popup p {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
