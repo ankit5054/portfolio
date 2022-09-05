@@ -63,8 +63,35 @@ function actionNotice() {
 buttonNoticeListener.addEventListener('click', actionNotice)
 
 
-
 /*==================== QUALIFICATION TABS ====================*/
+const qualification__button = document.querySelectorAll('.qualification__button')
+// const work_button = document.getElementsByClassName('qualification__button work button button--flex')
+// const edu_button = document.getElementsByClassName('qualification__button edu button button--flex')
+
+
+
+function qualificationAction() {
+    const className = this.className
+    console.log("Qd: ",className)
+
+    if (className === 'qualification__button edu button button--flex') {
+        document.getElementById('education').classList.add('qualification__active')
+        document.getElementById('work').classList.remove('qualification__active')
+        // work_button.classList.remove('active')
+        // edu_button.classList.add('active')
+    }
+    if(className === 'qualification__button work button button--flex') {
+        document.getElementById('work').classList.add('qualification__active')
+        document.getElementById('education').classList.remove('qualification__active')
+        // edu_button.classList.remove('active')
+        // work_button.classList.add('active')
+        
+    }
+}
+
+
+qualification__button.forEach(e => { e.addEventListener('click', qualificationAction) })
+
 
 /*==================== SERVICES MODAL ====================*/
 
