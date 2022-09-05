@@ -662,7 +662,7 @@ img {
 
 
 .popup{
-  width: 400px;
+  width: 300px;
   background: rgb(132, 114, 114);
   border-radius: 1rem;
   top: 50%;
@@ -679,8 +679,8 @@ img {
   background: rgb(212, 255, 20);
   border-radius: 1rem;
   margin: 10px 10px 10px 10px;
-  width: 480px;
-  font-size: var(--h3-font-size);
+  width: 380px;
+  font-size: 1.3rem;
 }
 
 .popup p {
