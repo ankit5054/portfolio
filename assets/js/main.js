@@ -72,7 +72,7 @@ const qualification__button = document.querySelectorAll('.qualification__button'
 
 function qualificationAction() {
     const className = this.className
-    console.log("Qd: ",className)
+    console.log("Qd: ", className)
 
     if (className === 'qualification__button edu button button--flex') {
         document.getElementById('education').classList.add('qualification__active')
@@ -80,12 +80,12 @@ function qualificationAction() {
         // work_button.classList.remove('active')
         // edu_button.classList.add('active')
     }
-    if(className === 'qualification__button work button button--flex') {
+    if (className === 'qualification__button work button button--flex') {
         document.getElementById('work').classList.add('qualification__active')
         document.getElementById('education').classList.remove('qualification__active')
         // edu_button.classList.remove('active')
         // work_button.classList.add('active')
-        
+
     }
 }
 
@@ -106,3 +106,58 @@ qualification__button.forEach(e => { e.addEventListener('click', qualificationAc
 /*==================== SHOW SCROLL UP ====================*/
 
 /*==================== DARK LIGHT THEME ====================*/
+
+
+
+/*==================== Play with Colors ====================*/
+// document.getElementById("slideHue").onchange = function() {changeHueColor()};
+
+function changeHueColor() {
+    
+    var value_range = document.getElementById('slideHue').value
+    var r = document.querySelector(':root');
+    r.style.setProperty('--hue-color', value_range )
+    document.getElementById("valueofhue").innerText = value_range 
+
+}
+ 
+function changeBgColor() {
+
+    var value_range = document.getElementById('bgHue').value
+    // console.log('BG hue : ',value_range)
+    var r = document.querySelector(':root');
+    r.style.setProperty('--hue-body-color', value_range )
+    document.getElementById("valueofbghue").innerText = value_range 
+
+}
+ 
+function changeMenuColor() {
+
+    var value_range = document.getElementById('menuHue').value
+    // console.log('BG hue : ',value_range)
+    var r = document.querySelector(':root');
+    r.style.setProperty('--hue-menu-color', value_range )
+    document.getElementById("valueofmenuhue").innerText = value_range 
+
+}
+
+
+function togglecolorbars(){
+    let color_button = document.getElementById('color-tab-alt_button')
+    let color_play_tab = document.getElementById('color-play-tab')
+    // console.log('color tabs : ',color_play_tab)
+    color_button.classList.remove('color-tab-alt_button-show')
+    color_button.classList.add('color-tab-alt_button-no-show')
+    color_play_tab.classList.remove('tab-no-show')
+    color_play_tab.classList.add('tab-show')
+}
+
+function hidecolobars(){
+    let color_button = document.getElementById('color-tab-alt_button')
+    let color_play_tab = document.getElementById('color-play-tab')
+    // console.log('color tabs : ',color_play_tab)
+    color_button.classList.add('color-tab-alt_button-show')
+    color_button.classList.remove('color-tab-alt_button-no-show')
+    color_play_tab.classList.add('tab-no-show')
+    color_play_tab.classList.remove('tab-show')
+}
