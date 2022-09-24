@@ -98,20 +98,20 @@ const modalViews = document.querySelectorAll('.services__modal'),
     modalBtns = document.querySelectorAll('.services__button'),
     modalCloses = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick){
+let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
 
 
-modalBtns.forEach((modalBtn, i)=>{
-    modalBtn.addEventListener('click',()=>{
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
         modal(i)
     })
 })
 
-modalCloses.forEach((modalClose,i)=>{
-    modalClose.addEventListener('click',()=>{
-        modalViews.forEach((modalView)=>{
+modalCloses.forEach((modalClose, i) => {
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
     })
@@ -120,6 +120,16 @@ modalCloses.forEach((modalClose,i)=>{
 
 
 /*==================== PORTFOLIO SWIPER  ====================*/
+let swiper = new Swiper('.portfolio__container', {
+    cssMode: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: ".swiper-button-prev"
+    },
+    pagination: { el: ".swiper-pagination" },
+    mousewheel: true,
+    keyboard: true,
+})
 
 /*==================== TESTIMONIAL ====================*/
 
@@ -137,36 +147,36 @@ modalCloses.forEach((modalClose,i)=>{
 // document.getElementById("slideHue").onchange = function() {changeHueColor()};
 
 function changeHueColor() {
-    
+
     var value_range = document.getElementById('slideHue').value
     var r = document.querySelector(':root');
-    r.style.setProperty('--hue-color', value_range )
-    document.getElementById("valueofhue").innerText = value_range 
+    r.style.setProperty('--hue-color', value_range)
+    document.getElementById("valueofhue").innerText = value_range
 
 }
- 
+
 function changeBgColor() {
 
     var value_range = document.getElementById('bgHue').value
     // console.log('BG hue : ',value_range)
     var r = document.querySelector(':root');
-    r.style.setProperty('--hue-body-color', value_range )
-    document.getElementById("valueofbghue").innerText = value_range 
+    r.style.setProperty('--hue-body-color', value_range)
+    document.getElementById("valueofbghue").innerText = value_range
 
 }
- 
+
 function changeMenuColor() {
 
     var value_range = document.getElementById('menuHue').value
     // console.log('BG hue : ',value_range)
     var r = document.querySelector(':root');
-    r.style.setProperty('--hue-menu-color', value_range )
-    document.getElementById("valueofmenuhue").innerText = value_range 
+    r.style.setProperty('--hue-menu-color', value_range)
+    document.getElementById("valueofmenuhue").innerText = value_range
 
 }
 
 
-function togglecolorbars(){
+function togglecolorbars() {
     let color_button = document.getElementById('color-tab-alt_button')
     let color_play_tab = document.getElementById('color-play-tab')
     // console.log('color tabs : ',color_play_tab)
@@ -176,7 +186,7 @@ function togglecolorbars(){
     color_play_tab.classList.add('tab-show')
 }
 
-function hidecolobars(){
+function hidecolobars() {
     let color_button = document.getElementById('color-tab-alt_button')
     let color_play_tab = document.getElementById('color-play-tab')
     // console.log('color tabs : ',color_play_tab)
